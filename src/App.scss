@@ -1,0 +1,11 @@
+@import './mixins.scss';
+
+.container {
+  max-width: 73.125rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  @include respond_to(small) {
+    max-width: 37.5rem;
+  }
+}

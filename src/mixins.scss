@@ -1,0 +1,18 @@
+// Define a mixin for media queries
+@mixin respond_to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == medium {
+    @media (min-width: 601px) and (max-width: 900px) {
+      @content;
+    }
+  }
+  @else if $breakpoint == large {
+    @media (min-width: 901px) {
+      @content;
+    }
+  }
+}

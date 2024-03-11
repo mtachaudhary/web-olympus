@@ -1,0 +1,77 @@
+@import '../../mixins.scss';
+
+.formWrapper {
+  display: flex;
+  align-items: center;
+  gap: 3.5625rem;
+  padding: 2.5rem 0;
+
+  @include respond_to(small) {
+    flex-direction: column;
+  }
+}
+
+// Form
+.contactForm {
+
+  label {
+    font-size: 1.125;
+    font-weight: 600;
+    line-height: 1.33;
+    margin-bottom: 1rem;
+    display: block;
+    width: 100%;
+  }
+
+  input, select, textarea, button[type='submit'] {
+    font-family: "Plus Jakarta Sans";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    border: 1px solid #FFFFFF;
+    padding: 1rem;
+    color: #FFFFFF;
+    background-color: transparent;
+    outline: none;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 9rem;
+    resize: vertical;
+  }
+
+  .formField {
+    margin-bottom: 1.5rem;
+  }
+
+  button[type='submit'] {
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: 1px solid #FFFFFF;
+    border: 0.5rem solid transparent;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.5625rem;
+
+    &:hover {
+      background-color: var(--wo-color-primary);
+      border-color: var(--wo-color-primary);
+      border-image: url('../../images/contact-img.svg') 30 repeat;
+      outline: none;
+    }
+  }
+  
+}
+
+// contact image 
+.formImage img {
+  width: 22.5rem;
+
+  @include respond_to(small) {
+    width: 100%;
+  }
+}
